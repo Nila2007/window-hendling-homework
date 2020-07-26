@@ -15,13 +15,13 @@ public class BaseTest extends Utils11 {
     BrowserManager browserManager = new BrowserManager();
 
 
-    @BeforeTest
+    @BeforeSuite
     public void toVerifyThatUserOnHomePage(){
         browserManager.setBrowser();
         browserManager.typeTheUrl();
     }
 
-    @AfterMethod
+    @AfterSuite
     public void CloseBrowser(ITestResult result) { //Method to close browser
         if (ITestResult.FAILURE == result.getStatus()) {
             ScreenShotCapture(result.getName()+timestamp());

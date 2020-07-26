@@ -17,15 +17,9 @@ public class TestSuit extends BaseTest {
     IFrameWork iFrameWork = new IFrameWork();
     BaseTest baseTest = new BaseTest();
     Utils11 utils11 =new Utils11();
+    LoadProp loadProp=new LoadProp();
 
 
-    @BeforeTest
-    public void setBrowserManager()
-    {   // To verify Homepage
-        browserManager.setBrowser();
-        browserManager.typeTheUrl();
-        homePage.getTextFromeHomePage();
-    }
     @Test
     public void userGetAlertMessage()
     {    //*****To verify Alert Message******
@@ -38,6 +32,7 @@ public class TestSuit extends BaseTest {
         homePage.clickOnFaceBookLogo();
         faceBookPage.WindowHandleForFaceBookPage();
         faceBookPage.assertByTexAndColor();
+
     }
     @Test(priority = 2)
     public void Comment()
@@ -61,7 +56,6 @@ public class TestSuit extends BaseTest {
         iFrameWork.animalName();
         iFrameWork.categoryList();
         iFrameWork.verifyURL();
-
     }
 
 

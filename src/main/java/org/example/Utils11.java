@@ -57,7 +57,7 @@ public class Utils11 extends BasePage {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         //The below method will save the screen shot in d drive with test method name
         try {
-            FileUtils.copyFile(scrFile, new File(("src\\ScreenShot" + NameofScreenshot + ".png")));
+            FileUtils.copyFile(scrFile, new File("src\\ScreenShot\\" + NameofScreenshot + ".png"));
 
         } catch (IOException e) {
             e.printStackTrace();
